@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public abstract class Article {
 
-    private static HashMap<String,Article> collection ;
-    private static HashMap<String,ArticleUnitaire> produits ;
+    private static HashMap<String,Article> collection = new HashMap<>() ;
+    private static HashMap<String,ArticleUnitaire> produits = new HashMap<>();
 
     public static boolean addArticle(String ref, Article article) {
         if (collection.containsKey(ref)) {
