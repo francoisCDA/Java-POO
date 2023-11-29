@@ -8,11 +8,12 @@ public class Bibliotheque {
 
     private ArrayList<Emprunt> emprunts = new ArrayList<Emprunt>() ;
 
-    public void addLivre(Livre livre) {
-        livres.add(livre);
+    public boolean addLivre(Livre livre) {
+        return livres.add(livre);
     }
 
-    public void deleteLivre(int id) {
+    public boolean deleteLivre(int id) {
+
         int idx = -1;
         for (int i = 0 ; i < livres.size() ; i++ ) {
             if (livres.get(i).id == id) {
@@ -21,7 +22,9 @@ public class Bibliotheque {
         }
         if (idx != -1) {
             livres.remove(idx);
+            return true;
         }
+        return false;
     }
 
     public Livre[] findLivresByTitre(String titre) {
@@ -34,7 +37,18 @@ public class Bibliotheque {
         }
 
         return ret.toArray(new Livre[0]);
+    }
 
+    public Livre[] searchLivresByTitre(String titre) {
+        ArrayList<Livre> ret = new ArrayList<Livre>();
+
+        for (Livre l:livres) {
+            if (l.titre.contains(titre)) {
+                ret.add(l);
+            }
+        }
+
+        return ret.toArray(new Livre[0]);
     }
 
     public Livre[] findLivresByAuteur(String auteur) {
@@ -45,10 +59,20 @@ public class Bibliotheque {
                 ret.add(l);
             }
         }
-
         return ret.toArray(new Livre[0]);
-
     }
+
+    public Livre[] searchLivresByAuteur(String auteur) {
+        ArrayList<Livre> ret = new ArrayList<Livre>();
+
+        for (Livre l:livres) {
+            if (l.auteur.contains(auteur)) {
+                ret.add(l);
+            }
+        }
+        return ret.toArray(new Livre[0]);
+    }
+
 
     public boolean empruntLivre(Personne personne, Livre livre ) {
         return empruntLivre(personne,livre,6);
