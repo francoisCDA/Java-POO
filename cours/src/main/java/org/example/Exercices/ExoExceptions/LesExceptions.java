@@ -47,7 +47,7 @@ public class LesExceptions {
         String[] tableau = {"A","B","C","D","E"};
 
         try {
-            System.out.println(IdxTable("Valeur du tableau : " + tableau,2));
+            System.out.println("Valeur du tableau : " + IdxTable( tableau,2));
         } catch (Exception error) {
             System.out.println(error.getMessage());
         }
