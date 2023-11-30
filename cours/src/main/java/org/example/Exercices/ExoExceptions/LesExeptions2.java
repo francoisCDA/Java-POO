@@ -10,7 +10,7 @@ public class LesExeptions2 {
     private static Scanner scan = new Scanner(System.in);
 
 
-    private static int soldeDuComptePourExo4 = 100;
+    private static int soldeDuComptePourExo4 = 200;
 
     public static void main(String[] args) {
 
@@ -24,7 +24,6 @@ public class LesExeptions2 {
             } catch (SoldeInsuffisantException banqueroute) {
                 System.out.println(banqueroute.getMessage());
             }
-
         }
 
 
@@ -32,7 +31,7 @@ public class LesExeptions2 {
 
     private static void exo4(int retrait) throws SoldeInsuffisantException {
 
-        if (retrait >= soldeDuComptePourExo4 ) throw new SoldeInsuffisantException();
+        if (retrait >= soldeDuComptePourExo4 ) {throw new SoldeInsuffisantException();}
 
         soldeDuComptePourExo4 -= retrait;
 
@@ -45,9 +44,9 @@ public class LesExeptions2 {
         float resulat;
 
         try {
-            System.out.println("saisissez une nombre");
+            System.out.println("saisissez un nombre");
             numerateur = scan.nextInt();
-            System.out.println("saisissez une nombre");
+            System.out.println("saisissez un nombre");
             denominateur = scan.nextInt();
 
             resulat = numerateur / denominateur ;
