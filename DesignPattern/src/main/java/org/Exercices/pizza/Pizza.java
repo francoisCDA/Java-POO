@@ -8,9 +8,7 @@ public class Pizza {
 
     private TaillePizza taille;
     private TypePizza type;
-
     private FromagePizza fromage;
-
     private Set<GarniturePizza> garniture;
     private SaucePizza sauce;
 
@@ -88,10 +86,14 @@ public class Pizza {
             this.sauce = sauce ;
             return this;
         }
+        public Builder garniture(TreeSet<GarniturePizza> garnitures) {
+            this.garniture = garnitures;
+            return this;
+        }
 
         public Builder garniture(GarniturePizza garniture) {
             if ((garniture == GarniturePizza.ANCHOIX) && this.garniture.contains(GarniturePizza.VIANDE_HACHEE)) {
-                    return this;
+                return this;
             }
             if ((garniture == GarniturePizza.VIANDE_HACHEE) && this.garniture.contains(GarniturePizza.ANCHOIX)) {
                 return this;
@@ -101,6 +103,7 @@ public class Pizza {
         }
 
         public Pizza build() {
+            // définir les valeurs par default
             return new Pizza(this);
         }
 
