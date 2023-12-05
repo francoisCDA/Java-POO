@@ -18,7 +18,19 @@ public class Main {
                 .garniture(GarniturePizza.CHEVRE)
                 .build();
 
+        Pizza pizza2 = new  Pizza.Builder()
+                .fromage(FromagePizza.MOZZARELLA)
+                .taille(TaillePizza.GRANDE)
+                .sauce(SaucePizza.TOMATE)
+                .garniture(GarniturePizza.CHAMPIGNONS)
+                .garniture(GarniturePizza.POIVRONS)
+                .garniture(GarniturePizza.VIANDE_HACHEE)
+                .garniture(GarniturePizza.ANCHOIX)
+                .garniture(GarniturePizza.CHEVRE)
+                .build();
+
         System.out.println(pizza1);
+        System.out.println(pizza2);
 
     }
 }

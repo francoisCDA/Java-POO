@@ -15,11 +15,39 @@ public class Pizza {
     private SaucePizza sauce;
 
     private Pizza(Builder build) {
-        this.taille = build.taille;
-        this.type = build.type;
-        this.fromage = build.fromage;
-        this.sauce = build.sauce;
+        setTaille(build.taille);
+        setType(build.type);
+        setFromage(fromage);
+        setSauce(sauce);
         this.garniture = build.garniture;
+    }
+
+    private void setTaille(TaillePizza taille) {
+        if (taille== null){
+            taille = TaillePizza.MOYENNE;
+        }
+        this.taille = taille;
+    }
+
+    private void setType(TypePizza type) {
+        if (type == null ) {
+            type = TypePizza.CLASSIQUE;
+        }
+        this.type = type;
+    }
+
+    private void setFromage(FromagePizza fromage) {
+        if (fromage == null ) {
+            fromage = FromagePizza.SANS_FROMAGE;
+        }
+        this.fromage = fromage;
+    }
+
+    private void setSauce(SaucePizza sauce) {
+        if (sauce == null){
+            sauce = SaucePizza.TOMATE;
+        }
+        this.sauce = sauce;
     }
 
     @Override
