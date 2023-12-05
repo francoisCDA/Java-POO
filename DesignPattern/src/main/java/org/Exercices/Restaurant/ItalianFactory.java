@@ -2,17 +2,17 @@ package org.Exercices.Restaurant;
 
 public class ItalianFactory extends CuisineFactory{
     @Override
-    Ingredients createIngredients() {
+    public Ingredients createIngredients() {
         return new ItalianIngredient();
     }
 
     @Override
-    CoockingUtensil createCoockingUstensil() {
+    public CoockingUtensil createCoockingUstensil() {
         return new ItalianUtensil();
     }
 
     @Override
-    Dish createDish() {
+    public Dish createDish() {
         return new ItalianDish();
     }
 }

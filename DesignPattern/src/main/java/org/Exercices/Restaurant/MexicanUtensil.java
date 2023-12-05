@@ -2,7 +2,7 @@ package org.Exercices.Restaurant;
 
 public class MexicanUtensil extends CoockingUtensil{
     @Override
-    void use() {
-
+    public void use() {
+        System.out.println("ustencil méxicain");
     }
 }

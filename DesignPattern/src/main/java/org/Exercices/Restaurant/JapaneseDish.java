@@ -3,7 +3,7 @@ package org.Exercices.Restaurant;
 public class JapaneseDish extends Dish{
 
     @Override
-    void serve() {
-
+    public void serve() {
+        System.out.println("Plat japonnais");
     }
 }

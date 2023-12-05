@@ -2,7 +2,7 @@ package org.Exercices.Restaurant;
 
 public class JapaneseIngredient extends Ingredients{
     @Override
-    void prepare() {
-
+    public void prepare() {
+        System.out.println("Ingrédient japonais");
     }
 }

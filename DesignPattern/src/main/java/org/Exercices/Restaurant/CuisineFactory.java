@@ -2,11 +2,11 @@ package org.Exercices.Restaurant;
 
 public abstract class CuisineFactory {
 
-    abstract Ingredients createIngredients();
+    public abstract Ingredients createIngredients();
 
-    abstract CoockingUtensil createCoockingUstensil();
+    public abstract CoockingUtensil createCoockingUstensil();
 
-    abstract Dish createDish();
+    public abstract Dish createDish();
 
 
 

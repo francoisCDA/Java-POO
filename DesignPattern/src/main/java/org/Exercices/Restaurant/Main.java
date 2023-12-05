@@ -8,5 +8,8 @@ public class Main {
 
         Restaurant restoJaponais = new Restaurant(new JapaneseFactory());
 
+
+        restoItalien.testResto();
+        restoJaponais.testResto();
     }
 }

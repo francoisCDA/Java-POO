@@ -14,5 +14,10 @@ public class Restaurant {
         dish = cuisine.createDish();
     }
 
+    public void testResto() {
+        ingredients.prepare();
+        coockingUtensil.use();
+        dish.serve();
+    }
 
 }
