@@ -11,16 +11,66 @@ public class Royaume {
 
     private int tresor;
 
-    private ArrayList<Batiment> batiments = new ArrayList<Batiment>() ;
+    private ArrayList<Batiment> batiments ;
 
-    private ArrayList<Personnage> personnages = new ArrayList<Personnage>();
+    private ArrayList<Personnage> personnages ;
 
 
-    private Royaume(int tresor ,ArrayList<Batiment> batiments, ArrayList<Personnage> personnages) {
-        setTresor(tresor);
-        setBatiments(batiments);
-        setPersonnages(personnages);
+
+    private Royaume(Builder builder) {
+        setTresor(builder.tresor);
+        setBatiments(builder.batiments);
+        setPersonnages(builder.personnages);
     }
+
+    public static class Builder {
+        private String nom;
+
+        private int tresor;
+
+        private ArrayList<Batiment> batiments = new ArrayList<Batiment>() ;
+
+        private ArrayList<Personnage> personnages = new ArrayList<Personnage>();
+
+
+
+        public Builder nom(String nom) {
+            this.nom = nom;
+            return this;
+        }
+
+        public Builder tresor(int tresor){
+            this.tresor = tresor;
+            return this;
+        }
+
+        public Builder batiments(ArrayList<Batiment> batiments) {
+            this.batiments.addAll(batiments);
+            return this;
+        }
+
+        public Builder batiments(Batiment batiment) {
+            this.batiments.add(batiment);
+            return this;
+        }
+
+        public Builder personnages(ArrayList<Personnage> personnages){
+            this.personnages.addAll(personnages);
+            return this;
+        }
+
+        public Builder personnages(Personnage personnage) {
+                this.personnages.add(personnage);
+                return this;
+        }
+
+        public Royaume build() {
+            return new Royaume(this);
+        }
+
+
+    }
+
 
     public String getNom() {
         return nom;
@@ -34,9 +84,7 @@ public class Royaume {
         return tresor;
     }
 
-    public void setTresor(int tresor) {
-        this.tresor = tresor;
-    }
+    public void setTresor(int tresor) { this.tresor = tresor; }
 
     public void setBatiments(ArrayList<Batiment> batiments) {
         this.batiments = batiments;
@@ -51,6 +99,9 @@ public class Royaume {
         this.personnages = personnages;
     }
 
+    public void commercer(Royaume ami) {
+        System.out.println("Vous commercez avec le royaume de " + ami.nom);
+    }
     public void declarerLaGuerre(Royaume ennemie) {
         System.out.println("Vous avez déclarer la guerre au royaume de " + ennemie.nom);
     }
