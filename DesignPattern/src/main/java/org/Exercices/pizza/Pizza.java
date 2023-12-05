@@ -17,13 +17,13 @@ public class Pizza {
     private Pizza(Builder build) {
         setTaille(build.taille);
         setType(build.type);
-        setFromage(fromage);
-        setSauce(sauce);
+        setFromage(build.fromage);
+        setSauce(build.sauce);
         this.garniture = build.garniture;
     }
 
     private void setTaille(TaillePizza taille) {
-        if (taille== null){
+        if (taille == null ){
             taille = TaillePizza.MOYENNE;
         }
         this.taille = taille;

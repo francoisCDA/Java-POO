@@ -19,9 +19,6 @@ public class Main {
                 .build();
 
         Pizza pizza2 = new  Pizza.Builder()
-                .fromage(FromagePizza.MOZZARELLA)
-                .taille(TaillePizza.GRANDE)
-                .sauce(SaucePizza.TOMATE)
                 .garniture(GarniturePizza.CHAMPIGNONS)
                 .garniture(GarniturePizza.POIVRONS)
                 .garniture(GarniturePizza.VIANDE_HACHEE)
