@@ -24,4 +24,8 @@ public class Monde {
         return instance;
     }
 
+    public void addRoyaume(Royaume royaume) {
+        this.monde.put(royaume.getNom(),royaume);
+    }
+
 }

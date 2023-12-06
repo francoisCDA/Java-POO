@@ -18,6 +18,7 @@ public class Royaume {
 
 
     private Royaume(Builder builder) {
+        this.nom = builder.nom;
         setTresor(builder.tresor);
         setBatiments(builder.batiments);
         setPersonnages(builder.personnages);
@@ -65,6 +66,8 @@ public class Royaume {
         }
 
         public Royaume build() {
+            if (nom == null) throw new RuntimeException("Nom obligatoire");
+            if (personnages == null) throw new RuntimeException("un royaume doit avoir des personnages");
             return new Royaume(this);
         }
 
@@ -95,7 +98,6 @@ public class Royaume {
     }
 
     public void setPersonnages(ArrayList<Personnage> personnages) {
-        if (personnages == null) throw new RuntimeException("un royaume doit avoir des personnages");
         this.personnages = personnages;
     }
 
