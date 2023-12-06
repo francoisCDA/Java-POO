@@ -9,9 +9,7 @@ import java.util.Arrays;
 
 public class Personnage {
 
-
     private int[] PvForceMagie = new int[3];
-
     private Sprites sprites;
     private Stats stats;
     private Actions actions;
@@ -24,7 +22,7 @@ public class Personnage {
 
     }
 
-    public Personnage(Builder builder){
+    private Personnage(Builder builder){
         PvForceMagie[0] = builder.PV;
         PvForceMagie[1] = builder.force;
         PvForceMagie[2] = builder.magie;

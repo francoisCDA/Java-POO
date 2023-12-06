@@ -1,19 +1,17 @@
 package org.TP_JV.factory.batiments;
 
-import org.TP_JV.factory.batiments.abstracs.DefenseBatiment;
-import org.TP_JV.factory.batiments.abstracs.FormeBatiment;
-import org.TP_JV.factory.batiments.abstracs.ProductBatiment;
-import org.TP_JV.factory.batiments.abstracs.StyleBatiment;
+
+import org.TP_JV.factory.entity.Afficher;
+import org.TP_JV.factory.entity.PrixFabrication;
+import org.TP_JV.factory.entity.Production;
 
 public abstract class BatimentFactory {
 
-    public abstract StyleBatiment createBatStyle();
+    public abstract PrixFabrication createBatiment();
 
-    public abstract FormeBatiment createBatForme();
+    public abstract Afficher createSprite();
 
-    public abstract DefenseBatiment createBatDefense();
-
-    public abstract ProductBatiment createBatProduct();
+    public abstract Production createProduction();
 
 
 
