@@ -12,27 +12,28 @@ public class Main {
         NavigationSysteme gogoleMap = new NavigationSysteme();
 
 
-        System.out.println("Indiquer une destination");
+        System.out.print("\n\tIndiquer une destination > ");
         String destination = inputTxt.nextLine();
 
         String choix = "null";
 
-        while (!choix.equals("Q")) {
-            System.out.println("Choix de navigation");
-            System.out.println("1 - Par la route");
-            System.out.println("2 - Offroad");
-            System.out.println("3 - Economique");
-            System.out.println("Q - Quitter");
+        while (!choix.equalsIgnoreCase("Q")) {
+            System.out.println("\n > Choix de navigation");
+            System.out.println("\t1 - Par la route");
+            System.out.println("\t2 - Offroad");
+            System.out.println("\t3 - Economique");
+            System.out.println("\tQ - Quitter");
             choix = inputTxt.next();
 
             switch (choix) {
                 case "1" -> gogoleMap.goTo(destination,new RoadStrategy());
                 case "2" -> gogoleMap.goTo(destination,new OffRoadStrategy());
                 case "3" -> gogoleMap.goTo(destination,new EconomicStrategy());
-
             }
 
         }
+
+        System.out.println("\n Fermeture de l'application... \n\t À bientôt.");
 
     }
 }

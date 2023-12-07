@@ -1,6 +1,5 @@
 package org.Exercices.Strategie;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
