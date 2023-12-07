@@ -21,7 +21,7 @@ public class Main {
             System.out.println("Choix de navigation");
             System.out.println("1 - Par la route");
             System.out.println("2 - Offroad");
-            System.out.println("3 - Econmic");
+            System.out.println("3 - Economique");
             System.out.println("Q - Quitter");
             choix = inputTxt.next();
 
