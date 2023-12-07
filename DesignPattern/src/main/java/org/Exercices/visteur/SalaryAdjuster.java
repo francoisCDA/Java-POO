@@ -3,7 +3,7 @@ package org.Exercices.visteur;
 public class SalaryAdjuster implements EmployeeVisitor {
     @Override
     public void inspect(Manager manager) {
-        System.out.println("mise à jour salaire manadger");
+        System.out.println("mise à jour salaire manager");
     }
 
     @Override

@@ -14,6 +14,6 @@ public class PerformanceEvaluator implements EmployeeVisitor{
 
     @Override
     public void inspect(Designer designer) {
-        System.out.println("Midjourney est plus preformant");
+        System.out.println("Midjourney est plus performant");
     }
 }
