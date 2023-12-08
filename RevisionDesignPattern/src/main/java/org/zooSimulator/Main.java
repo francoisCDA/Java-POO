@@ -28,7 +28,16 @@ public class Main {
 
         Zoo.getInstance().animalssVisitorsNotification();
 
+        Zoo.getInstance().removeVisiteur(Zoo.getInstance().randomVisitor());
+        Zoo.getInstance().removeVisiteur(Zoo.getInstance().randomVisitor());
 
+
+
+        Zoo.getInstance().addAnimal(new Fauve("Toto"));
+        Zoo.getInstance().addAnimal(new Fauve("Titi"));
+
+
+        Zoo.getInstance().animalssVisitorsNotification();
 
     }
 }

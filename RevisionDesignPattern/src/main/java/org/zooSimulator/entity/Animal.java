@@ -2,10 +2,7 @@ package org.zooSimulator.entity;
 
 
 import lombok.Data;
-import org.zooSimulator.Zoo;
 import org.zooSimulator.activites.AnimalActivity;
-import org.zooSimulator.builder.AnimalBuilder;
-import org.zooSimulator.builder.VisiteurBuilder;
 import org.zooSimulator.factory.AnimalFactory;
 import org.zooSimulator.interfacesObserver.Observator;
 import org.zooSimulator.interfacesObserver.Subject;

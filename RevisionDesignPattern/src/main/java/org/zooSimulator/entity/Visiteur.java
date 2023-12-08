@@ -1,10 +1,7 @@
 package org.zooSimulator.entity;
 
-import lombok.Builder;
+
 import lombok.Data;
-import org.zooSimulator.Zoo;
-import org.zooSimulator.builder.VisiteurBuilder;
-import org.zooSimulator.entity.Animal;
 import org.zooSimulator.interfacesObserver.Observator;
 @Data
 public class Visiteur implements Observator<Animal> {
@@ -17,7 +14,7 @@ public class Visiteur implements Observator<Animal> {
 
     public Visiteur(int age) {
 
-        numeroDeBillet = ++cmptBillet;
+        numeroDeBillet = ++Visiteur.cmptBillet;
         this.age = age;
 
     }
@@ -25,6 +22,6 @@ public class Visiteur implements Observator<Animal> {
 
     @Override
     public void updateActivite(Animal animal) {
-        System.out.println(animal.getActivite().activite());
+        System.out.println("Visiteur : + " + numeroDeBillet + ", age : " + age + ", getInfo : " + animal.getActivite().activite());
     }
 }

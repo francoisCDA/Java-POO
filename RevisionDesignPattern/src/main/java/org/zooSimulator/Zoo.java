@@ -2,11 +2,10 @@ package org.zooSimulator;
 
 import org.zooSimulator.entity.Animal;
 import org.zooSimulator.entity.Visiteur;
-import org.zooSimulator.interfacesObserver.Observator;
-import org.zooSimulator.interfacesObserver.Subject;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Zoo  {
 
@@ -16,20 +15,13 @@ public class Zoo  {
 
     private ArrayList<Visiteur> visiteurs ;
 
-    public List<Animal> getAnimaux() {
-        return animaux;
-    }
-
-    public List<Visiteur> getVisiteurs() {
-        return visiteurs;
-    }
 
     public void addAnimal(Animal animal) {
+        visiteurs.forEach(animal::registerObservator);
         animaux.add(animal);
     }
 
     public void rmAnimal(Animal animal) {
-
         animaux.remove(animal);
     }
 
@@ -68,5 +60,17 @@ public class Zoo  {
         animaux.forEach( a -> a.notifyObservators(a));
     }
 
+    public Visiteur randomVisitor() {
+        Random rand = new Random();
+        int idx = rand.nextInt(1,visiteurs.size())-1;
+        return visiteurs.get(idx);
+
+    }
+
+    public void rmRandomAnimal() {
+        Random rand = new Random();
+        int idx = rand.nextInt(1,animaux.size())-1;
+        rmAnimal(animaux.get(idx));
+    }
 
 }
