@@ -61,7 +61,11 @@ public class Zoo  {
 
 
     public void testActivity(){
-        animaux.forEach(Animal::getActivite);
+        animaux.forEach(a -> a.getActivite().activite());
+    }
+
+    public void animalssVisitorsNotification() {
+        animaux.forEach( a -> a.notifyObservators(a));
     }
 
 

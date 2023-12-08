@@ -25,6 +25,6 @@ public class Visiteur implements Observator<Animal> {
 
     @Override
     public void updateActivite(Animal animal) {
-        System.out.println(animal.getActivite());
+        System.out.println(animal.getActivite().activite());
     }
 }
