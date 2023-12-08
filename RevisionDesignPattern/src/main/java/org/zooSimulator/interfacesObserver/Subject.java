@@ -1,13 +1,12 @@
 package org.zooSimulator.interfacesObserver;
 
-import org.zooSimulator.Visiteur;
 
-public interface Subject {
+public interface Subject<T> {
 
-    void registerObservator(Visiteur visiteur);
+    void registerObservator(Observator<T> observer);
 
-    void removeObservator(Visiteur visiteur);
+    void removeObservator(Observator<T> observer);
 
-    void notifyObservator(String info);
+    void notifyObservators(T info);
 
 }

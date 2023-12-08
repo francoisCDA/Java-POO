@@ -1,9 +1,9 @@
 package org.zooSimulator.interfacesObserver;
 
-import org.zooSimulator.Animal;
+import org.zooSimulator.entity.Animal;
 
-public interface Observator {
+public interface Observator<T> {
 
-    void updateActivite(Animal animal);
+    void updateActivite(T sujet);
 
 }
